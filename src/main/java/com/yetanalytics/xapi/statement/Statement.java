@@ -56,6 +56,20 @@ public class Statement {
         }
     }
 
+    public class StatementReference {
+        protected String objectType = "StatementRef";
+        protected UUID id;
+
+        protected StatementReference(UUID srid) {
+            id = srid;
+        }
+
+        protected StatementReference(String srid) {
+            id = UUID.fromString(srid);
+        }
+    }
+
+    
 
     private static final class StatementContext {
         protected UUID registration = UUID.randomUUID();
