@@ -1,4 +1,4 @@
-package com.yetanalytics.xapi.test.statement;
+package com.yetanalytics.xapi.statement;
 
 import com.yetanalytics.xapi.statement.Statement;
 import org.junit.Test;
@@ -6,7 +6,7 @@ import org.junit.Test;
 import java.util.UUID;
 
 /**
- * Created by jason on 10/21/14.
+ * Created by Jason Lewis on 10/21/14.
  */
 public class StatementTest {
 
@@ -17,5 +17,10 @@ public class StatementTest {
         assert(stmt.actor != null);
         assert(stmt.verb != null);
         assert(stmt.object != null);
+    }
+
+    @Test
+    public void ExtraPiecesShouldBeOkay(Statement stmt) {
+
     }
 }

@@ -1,4 +1,4 @@
-package com.yetanalytics.xapi.test;
+package com.yetanalytics.xapi;
 
 /**
  * Created by jason on 10/21/14.

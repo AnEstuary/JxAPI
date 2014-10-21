@@ -1,8 +1,10 @@
 package com.yetanalytics.xapi.statement;
 
+import java.util.HashMap;
 import java.util.UUID;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
+import com.nimbusds.langtag.LangTag;
 
 
 /**
@@ -33,11 +35,39 @@ public class Statement {
         return true;
     }
 
+    public Result getResult() {
+        if(this.result != null) {
+            return this.result;
+        } else {
+            return null;
+        }
+    }
+
     public boolean setContext(StatementContext ctx) {
         context = ctx;
         return true;
     }
 
+    public StatementContext getContext() {
+        if(this.context != null) {
+            return this.context;
+        } else {
+            return null;
+        }
+    }
 
 
+    private static final class StatementContext {
+        protected UUID registration = UUID.randomUUID();
+        protected IActor instructor;
+        protected Group team;
+        protected String revision;
+        protected String platform;
+        protected HashMap<LangTag, String> language;
+
+    }
+
+    private static final class Result {
+
+    }
 }
