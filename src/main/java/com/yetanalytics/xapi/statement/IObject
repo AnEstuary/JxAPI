@@ -5,9 +5,9 @@ import java.net.URI;
 
 public interface IObject {
 
-    public URI uid(URI id);
+    public URI id(URI uid);
 
-    public URI uid(String id);
+    public URI id(String uid);
 
     public String objectType();
 }
