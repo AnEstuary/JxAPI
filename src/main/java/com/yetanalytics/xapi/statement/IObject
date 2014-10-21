@@ -1,0 +1,13 @@
+package com.yetanalytics.xapi.statement;
+
+
+import java.net.URI;
+
+public interface IObject {
+
+    public URI uid(URI id);
+
+    public URI uid(String id);
+
+    public String objectType();
+}

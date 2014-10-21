@@ -69,7 +69,7 @@ public class Statement {
         }
     }
 
-    
+
 
     private static final class StatementContext {
         protected UUID registration = UUID.randomUUID();
