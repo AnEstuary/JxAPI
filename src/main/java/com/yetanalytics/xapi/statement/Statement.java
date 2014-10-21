@@ -8,13 +8,15 @@ import com.nimbusds.langtag.LangTag;
 
 
 /**
- * Created by jason on 10/20/14.
+ * Created by Jason Lewis on 10/20/14.
+ * Describes the xAPI Statement object as defined in the xAPI Spec v1.0.2
+ * Spec available at https://github.com/adlnet/xAPI-Spec/blob/master/xAPI.md
  */
 public class Statement {
     public UUID id;
     public IActor actor;
     public Verb verb;
-    public StatementObject object;
+    public IObject object;
     public Result result;
     public StatementContext context;
 
@@ -22,7 +24,14 @@ public class Statement {
 
     protected String version = "1.0.2";
 
-    public Statement(IActor act, Verb v, StatementObject obj) {
+    /**
+     * CTOR for a new Statement with the minimum required elements
+     *
+     * @param act   An object (i.e., Agent or Group) implementing the IActor interface
+     * @param v     A Verb object
+     * @param obj   An Object of the Statement implementing the IObject interface
+     */
+    public Statement(IActor act, Verb v, IObject obj) {
         id = UUID.randomUUID();
         actor = act;
         verb = v;
@@ -30,11 +39,20 @@ public class Statement {
         timestamp = DateTime.now(DateTimeZone.UTC);
     }
 
+    /**
+     *
+     * @param res   A Result object conforming to xAPI spec 4.1.5 Result
+     * @return      boolean - true if the Result was successfully added to the Statement
+     */
     public boolean setResult(Result res) {
         result = res;
         return true;
     }
 
+    /**
+     *
+     * @return      The Result object associated with the statement
+     */
     public Result getResult() {
         if(this.result != null) {
             return this.result;

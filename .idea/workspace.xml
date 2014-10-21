@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3dd81b8-e32a-45d8-8b08-03f5667f1d75" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/LanguageMap.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/StatementObject.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Activity.java" afterPath="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Activity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/IObject" afterPath="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/IObject" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Verb.java" afterPath="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Verb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Statement.java" afterPath="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Statement.java" />
     </list>
     <ignored path="JxAPI.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,17 +59,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Statement.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Statement.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Statement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="632" max-vertical-offset="1395">
-              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.21625164" vertical-offset="0" max-vertical-offset="1665">
+              <caret line="11" column="73" selection-start-line="11" selection-start-column="73" selection-end-line="11" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1410#1411#0" expanded="true" />
-                <element signature="e#1443#1444#0" expanded="true" />
-                <element signature="e#1496#1497#0" expanded="true" />
-                <element signature="e#1546#1547#0" expanded="true" />
+                <element signature="e#2120#2121#0" expanded="true" />
+                <element signature="e#2153#2154#0" expanded="true" />
+                <element signature="e#2206#2207#0" expanded="true" />
+                <element signature="e#2256#2257#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,10 +112,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LanguageMap.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LanguageMap.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/LanguageMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15727392" vertical-offset="0" max-vertical-offset="870">
+            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="870">
               <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -372,12 +367,12 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/com/yetanalytics/xapi/test/statement/StatementTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Statement.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/StatementObject.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/IObject" />
         <option value="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Activity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Verb.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/LanguageMap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Statement.java" />
       </list>
     </option>
   </component>
@@ -871,20 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Statement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="632" max-vertical-offset="1395">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1410#1411#0" expanded="true" />
-            <element signature="e#1443#1444#0" expanded="true" />
-            <element signature="e#1496#1497#0" expanded="true" />
-            <element signature="e#1546#1547#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/IObject">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
@@ -918,10 +899,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/LanguageMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15727392" vertical-offset="0" max-vertical-offset="870">
+        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="870">
           <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yetanalytics/xapi/statement/Statement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21625164" vertical-offset="0" max-vertical-offset="1665">
+          <caret line="11" column="73" selection-start-line="11" selection-start-column="73" selection-end-line="11" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2120#2121#0" expanded="true" />
+            <element signature="e#2153#2154#0" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2256#2257#0" expanded="true" />
           </folding>
         </state>
       </provider>
