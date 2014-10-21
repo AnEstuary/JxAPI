@@ -1,13 +1,13 @@
 <component name="libraryTable">
-  <library name="com.nimbusds:lang-tag:1.4" type="repository">
-    <properties maven-id="com.nimbusds:lang-tag:1.4" />
+  <library name="Maven: com.nimbusds:lang-tag:1.4">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/nimbusds/lang-tag/1.4/lang-tag-1.4.jar!/" />
-      <root url="jar://$MAVEN_REPOSITORY$/net/minidev/json-smart/1.1.1/json-smart-1.1.1.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/com/nimbusds/lang-tag/1.4/lang-tag-1.4-javadoc.jar!/" />
     </JAVADOC>
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/nimbusds/lang-tag/1.4/lang-tag-1.4-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

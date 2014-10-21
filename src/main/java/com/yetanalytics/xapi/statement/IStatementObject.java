@@ -3,11 +3,8 @@ package com.yetanalytics.xapi.statement;
 
 import java.net.URI;
 
-public interface IObject {
+public interface IStatementObject {
 
-    public URI id(URI uid);
-
-    public URI id(String uid);
 
     public String objectType();
 }

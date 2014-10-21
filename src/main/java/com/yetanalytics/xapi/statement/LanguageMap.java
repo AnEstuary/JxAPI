@@ -2,13 +2,13 @@ package com.yetanalytics.xapi.statement;
 
 import com.nimbusds.langtag.LangTag;
 import com.nimbusds.langtag.LangTagException;
-
 import java.util.HashMap;
+import org.json.JSONObject;
 
 /**
  * Created by Jason Lewis on 10/21/14.
  */
-public class LanguageMap extends HashMap<LangTag, String> {
+public class LanguageMap extends HashMap<String, String> {
 
     /**
      * CTOR for a Language Map of arbitrary lang/region tag and description
@@ -23,7 +23,7 @@ public class LanguageMap extends HashMap<LangTag, String> {
         try{
             LangTag tag = new LangTag(lang);
             tag.setRegion(region);
-            this.put(tag, description);
+            this.put(tag.toString(), description);
         } catch(LangTagException e) {
             e.printStackTrace();
         }
@@ -42,10 +42,15 @@ public class LanguageMap extends HashMap<LangTag, String> {
         try{
             LangTag tag = new LangTag("en");
             tag.setRegion("US");
-            this.put(tag, description);
+            this.put(tag.toString(), description);
         } catch(LangTagException e) {
             e.printStackTrace();
         }
+    }
+
+    public String toJSONString() {
+        String json = new JSONObject(this).toString();
+        return json;
     }
 
 

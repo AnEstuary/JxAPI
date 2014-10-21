@@ -7,7 +7,7 @@ import java.net.URI;
 /**
  * Created by jason on 10/20/14.
  */
-public class Agent implements IActor {
+public class Agent implements IActor, IStatementObject {
 
     public String name;
     public URI mbox;
@@ -29,6 +29,7 @@ public class Agent implements IActor {
         mbox = URI.create(email);
         name = nm;
     }
+
 
     @Override
     public String objectType() {

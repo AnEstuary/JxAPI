@@ -19,26 +19,44 @@ public class Client {
 
     protected Resty restClient = new Resty();
 
-    // Constructor with a URI
-    public Client(URI lrsUri, String key, char[] secret) {
+    /**
+     * CTOR
+     *
+     * @param lrsUri    The URI of the LRS as a URI
+     * @param key       The API key for the LRS as a String
+     * @param secret    The API secret for the LRS as char[]
+     */
+    public Client(URI lrsUri, String key, String secret) {
 
         lrs = lrsUri;
         apiKey = key;
-        apiSecret = secret;
+        apiSecret = secret.toCharArray();
 
         restClient.authenticate(lrs, apiKey, apiSecret);
     }
 
-    //Constructor w/ URI from String
-    public Client(String lrsUri, String key, char[] secret) {
+    /**
+     * CTOR
+     *
+     * @param lrsUri    The URI of the LRS as a String
+     * @param key       The API key for the LRS as a String
+     * @param secret    The API secret for the LRS as char[]
+     */
+    public Client(String lrsUri, String key, String secret) {
 
         lrs = URI.create(lrsUri);
         apiKey = key;
-        apiSecret = secret;
+        apiSecret = secret.toCharArray();
 
         restClient.authenticate(lrs, apiKey, apiSecret);
     }
 
+    /**
+     * Send the Statement to the LRS
+     *
+     * @param stmt  Statement encoded as a JSON String
+     *
+     */
     public void sendStatement(String stmt) {
         byte[] stmtBytes = stmt.getBytes();
         Content stmtCon = new Content("application/json", stmtBytes);
