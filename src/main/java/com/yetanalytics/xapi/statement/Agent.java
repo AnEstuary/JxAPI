@@ -11,6 +11,7 @@ public class Agent implements IActor, IStatementObject {
 
     public String name;
     public URI mbox;
+    protected final String objectType = objectType();
 
     public Agent(URI email) {
         mbox = email;

@@ -6,7 +6,7 @@ import java.net.URI;
  * Created by jason on 10/20/14.
  */
 public class Group implements IActor, IStatementObject {
-    public String objectType;
+    protected final String objectType = objectType();
     public String name;
     public Agent[] member;
     public URI mbox;
@@ -20,7 +20,7 @@ public class Group implements IActor, IStatementObject {
     public Group(String nm, URI email) {
         name = nm;
         mbox = email;
-        objectType = objectType();
+        //objectType = objectType();
     }
 
     /**
@@ -32,7 +32,7 @@ public class Group implements IActor, IStatementObject {
     public Group(String nm, Agent[] members) {
         name = nm;
         member = members;
-        objectType = objectType();
+        //objectType = objectType();
     }
 
     /**

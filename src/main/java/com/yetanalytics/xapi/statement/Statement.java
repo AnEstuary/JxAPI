@@ -24,7 +24,7 @@ public class Statement {
     public String timestamp;
 
     protected String version = "1.0.2";
-    protected boolean isSubStatement = false;
+
 
     /**
      * CTOR for a new Statement with the minimum required elements
@@ -39,22 +39,6 @@ public class Statement {
         verb = v;
         object = obj;
         timestamp = DateTime.now(DateTimeZone.UTC).toString();
-    }
-
-    /**
-     * Set the SubStatement status of the statement. As SubStatements are not allowed
-     * to carry the version or id attributes, nullify them if it is a SubStatement
-     *
-     * @param ss    boolean; true if it is a SubStatement, default is false.
-     *
-     * TODO Refactor so SubStatements implement IStatementObject
-     */
-    protected void setSubStatement(boolean ss) {
-        this.isSubStatement = ss;
-        if(this.isSubStatement) {
-            this.version = null;
-            this.id = null;
-        }
     }
 
     /**

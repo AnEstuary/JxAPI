@@ -8,6 +8,7 @@ import java.util.UUID;
 public class StatementRef implements IStatementObject {
 
     public UUID id;
+    protected final String objectType = objectType();
 
     public StatementRef(UUID uid) {
         id = uid;

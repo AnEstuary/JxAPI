@@ -8,6 +8,7 @@ import java.net.URI;
 public class Activity implements IStatementObject {
     public URI id;
     protected Definition definition;
+    protected final String objectType = objectType();
 
     @Override
     public String objectType() {
