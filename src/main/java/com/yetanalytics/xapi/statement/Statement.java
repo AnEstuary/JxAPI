@@ -2,8 +2,6 @@ package com.yetanalytics.xapi.statement;
 
 import java.util.HashMap;
 import java.util.UUID;
-
-import com.sun.istack.internal.Nullable;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import com.nimbusds.langtag.LangTag;
