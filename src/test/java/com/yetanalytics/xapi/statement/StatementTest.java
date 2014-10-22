@@ -1,6 +1,7 @@
 package com.yetanalytics.xapi.statement;
 
 import com.yetanalytics.xapi.statement.Statement;
+import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.util.UUID;
@@ -8,7 +9,7 @@ import java.util.UUID;
 /**
  * Created by Jason Lewis on 10/21/14.
  */
-public class StatementTest {
+class StatementTest extends TestCase {
 
     @Test
     public void StatementShouldBeBasicallyValid(Statement stmt) {

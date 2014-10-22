@@ -4,11 +4,10 @@ package com.yetanalytics.xapi;
  * Created by jason on 10/20/14.
  */
 
-import us.monoid.web.Content;
-import us.monoid.web.Resty;
-
 import java.io.IOException;
 import java.net.URI;
+import us.monoid.web.Content;
+import us.monoid.web.Resty;
 import static us.monoid.web.Resty.*;
 
 public class Client {
