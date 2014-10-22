@@ -6,17 +6,19 @@ package com.yetanalytics.xapi;
 
 import java.io.IOException;
 import java.net.URI;
-import us.monoid.web.Content;
-import us.monoid.web.Resty;
-import static us.monoid.web.Resty.*;
+
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
+
 
 public class Client {
 
     private URI lrs;
     private String apiKey;
-    private char[] apiSecret;
+    private String apiSecret;
 
-    protected Resty restClient = new Resty();
 
     /**
      * CTOR
@@ -29,9 +31,9 @@ public class Client {
 
         lrs = lrsUri;
         apiKey = key;
-        apiSecret = secret.toCharArray();
+        apiSecret = secret;
 
-        restClient.authenticate(lrs, apiKey, apiSecret);
+
     }
 
     /**
@@ -45,9 +47,9 @@ public class Client {
 
         lrs = URI.create(lrsUri);
         apiKey = key;
-        apiSecret = secret.toCharArray();
+        apiSecret = secret;
 
-        restClient.authenticate(lrs, apiKey, apiSecret);
+
     }
 
     /**
@@ -56,14 +58,21 @@ public class Client {
      * @param stmt  Statement encoded as a JSON String
      *
      */
-    public void sendStatement(String stmt) {
-        byte[] stmtBytes = stmt.getBytes();
-        Content stmtCon = new Content("application/json", stmtBytes);
+    public HttpResponse<JsonNode> sendStatement(String stmt) {
+        HttpResponse<JsonNode> response;
         try {
-            restClient.json(lrs, put(stmtCon));
-        } catch (IOException e) {
+            response = Unirest.post(lrs.toString())
+                    .header("accept", "application/json")
+                    .basicAuth(apiKey, apiSecret)
+                    .body(stmt)
+                    .asJson();
+
+            return response;
+        } catch(UnirestException e) {
             e.printStackTrace();
         }
+
+        return null;
     }
 
 
