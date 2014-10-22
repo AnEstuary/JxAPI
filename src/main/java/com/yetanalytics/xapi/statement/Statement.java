@@ -48,6 +48,8 @@ public class Statement {
      * to carry the version or id attributes, nullify them if it is a SubStatement
      *
      * @param ss    boolean; true if it is a SubStatement, default is false.
+     *
+     * TODO Refactor so SubStatements implement IStatementObject
      */
     protected void setSubStatement(boolean ss) {
         this.isSubStatement = ss;
