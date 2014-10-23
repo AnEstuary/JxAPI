@@ -2,6 +2,8 @@ package com.yetanalytics.xapi.statement;
 
 import java.util.HashMap;
 import java.util.UUID;
+
+import com.google.gson.Gson;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import com.nimbusds.langtag.LangTag;
@@ -39,6 +41,12 @@ public class Statement {
         verb = v;
         object = obj;
         timestamp = DateTime.now(DateTimeZone.UTC).toString();
+    }
+
+    public String toJSONString() {
+        Gson gson = new Gson();
+
+        return gson.toJson(this);
     }
 
     /**
