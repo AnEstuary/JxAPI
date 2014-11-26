@@ -1,5 +1,6 @@
 package com.yetanalytics.xapi.statement;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 
@@ -21,7 +22,7 @@ public class Statement {
     public Verb verb;
     public IStatementObject object;
     public Result result;
-    public StatementContext context;
+    public Context context;
 
     public String timestamp;
 
@@ -29,7 +30,7 @@ public class Statement {
 
 
     /**
-     * CTOR for a new Statement with the minimum required elements
+     * Constructor for a new Statement with the minimum required elements
      *
      * @param act   An object (i.e., Agent or Group) implementing the IActor interface
      * @param v     A Verb object
@@ -59,6 +60,11 @@ public class Statement {
         return true;
     }
 
+    public boolean setResultResponse(String resp) {
+        result = new Result(resp);
+        return true;
+    }
+
     /**
      *
      * @return      The Result object associated with the statement
@@ -71,27 +77,7 @@ public class Statement {
         }
     }
 
-    /**
-     * Set the StatementContext, if such a thing ever exists
-     * @param ctx   The StatementContext object
-     * @return      true if successful
-     */
-    public boolean setContext(StatementContext ctx) {
-        context = ctx;
-        return true;
-    }
 
-    /**
-     * Retrieve the StatementContext
-     * @return      StatementContext if it exists, else null.
-     */
-    public StatementContext getContext() {
-        if(this.context != null) {
-            return this.context;
-        } else {
-            return null;
-        }
-    }
 
     public class StatementReference implements IStatementObject {
         protected static final String objectType = "StatementRef";
@@ -120,18 +106,6 @@ public class Statement {
     }
 
 
-    /**
-     * Yeah, this shit. Fuck this shit.
-     */
-    private static final class StatementContext {
-        protected UUID registration = UUID.randomUUID();
-        protected IActor instructor;
-        protected Group team;
-        protected String revision;
-        protected String platform;
-        protected HashMap<LangTag, String> language;
-
-    }
 
     /**
      * The 'Result' for the Statement.
@@ -144,6 +118,10 @@ public class Statement {
         public String response;
         public Duration duration;
         public Score score;
+
+        public Result(String resp) {
+            response = resp;
+        }
 
         public Result(boolean success, boolean completion, String response, Duration duration, Score score) {
             System.out.println("Fuck this. Fuck all this noise");

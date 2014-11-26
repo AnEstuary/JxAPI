@@ -3,7 +3,6 @@ package com.yetanalytics.xapi.statement;
 import com.nimbusds.langtag.LangTag;
 import com.nimbusds.langtag.LangTagException;
 import java.util.HashMap;
-import org.json.JSONObject;
 
 /**
  * Created by Jason Lewis on 10/21/14.
@@ -48,10 +47,6 @@ public class LanguageMap extends HashMap<String, String> {
         }
     }
 
-    public String toJSONString() {
-        String json = new JSONObject(this).toString();
-        return json;
-    }
 
 
 }

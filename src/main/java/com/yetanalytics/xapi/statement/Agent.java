@@ -12,6 +12,7 @@ public class Agent implements IActor, IStatementObject {
     public String name;
     public URI mbox;
     protected final String objectType = objectType();
+    protected Account account;
 
     public Agent(URI email) {
         mbox = email;
@@ -31,9 +32,28 @@ public class Agent implements IActor, IStatementObject {
         name = nm;
     }
 
+    public Agent(Account acct, String nm) {
+        account = acct;
+        name = nm;
+    }
+
+    public Account setAccountInfo(URI hp, String nm) {
+        return new Account(hp, nm);
+    }
+
 
     @Override
     public String objectType() {
         return "Agent";
+    }
+
+    private class Account {
+        public URI homePage;
+        public String name;
+
+        public Account(URI hp, String nm) {
+            homePage = hp;
+            name = nm;
+        }
     }
 }
