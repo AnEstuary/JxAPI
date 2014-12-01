@@ -22,7 +22,7 @@ public class Statement {
     public Verb verb;
     public IStatementObject object;
     public Result result;
-    public Context context;
+    public StatementContext context;
 
     public String timestamp;
 

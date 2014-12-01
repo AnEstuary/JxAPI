@@ -7,7 +7,7 @@ import java.net.URI;
  */
 public class Activity implements IStatementObject {
     public URI id;
-    protected Definition definition;
+    public Definition definition;
     protected final String objectType = objectType();
 
     @Override
@@ -23,6 +23,10 @@ public class Activity implements IStatementObject {
         id = iri;
     }
 
+    public Activity(String iri) {
+        id = URI.create(iri);
+    }
+
     /**
      * Set the Activity Definition
      * @param nm    The definition "name" param
@@ -34,10 +38,16 @@ public class Activity implements IStatementObject {
         return definition;
     }
 
+    public Definition setDefinition(String nm, String desc) {
+        definition = new Definition(nm, desc);
+        return definition;
+    }
+
+
     /**
      * The Activity Definition
      */
-    protected class Definition {
+    public class Definition {
         public LanguageMap name;
         public LanguageMap description;
         public URI type;
@@ -53,6 +63,11 @@ public class Activity implements IStatementObject {
         public Definition(LanguageMap nm, LanguageMap desc) {
             name = nm;
             description = desc;
+        }
+
+        public Definition(String nm, String desc) {
+            name = new LanguageMap(nm);
+            description = new LanguageMap(desc);
         }
     }
 

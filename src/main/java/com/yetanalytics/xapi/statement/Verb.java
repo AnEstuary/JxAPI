@@ -13,4 +13,14 @@ public class Verb {
         id = iri;
         display = disp;
     }
+
+    /**
+     * Overload the stricter consturctor for ease of use
+     * @param iri
+     * @param disp
+     */
+    public Verb(String iri, String disp) {
+        id = URI.create(iri);
+        display = new LanguageMap(disp);
+    }
 }
