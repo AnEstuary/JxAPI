@@ -13,4 +13,8 @@ public class Extension extends HashMap<String, Object> {
     }
 
     public Extension(String key, Integer value) { this.put(key, value); }
+
+    public Extension(String key, Object value) {
+        this.put(key, value);
+    }
 }

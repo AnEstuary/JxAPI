@@ -26,7 +26,7 @@ public class Statement {
 
     public String timestamp;
 
-    protected String version = "1.0.2";
+    protected String version = "1.0.3";
 
 
     /**

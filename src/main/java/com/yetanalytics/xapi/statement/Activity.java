@@ -8,6 +8,7 @@ import java.net.URI;
 public class Activity implements IStatementObject {
     public URI id;
     public Definition definition;
+    public Extension extensions;
     protected final String objectType = objectType();
 
     @Override
@@ -25,6 +26,20 @@ public class Activity implements IStatementObject {
 
     public Activity(String iri) {
         id = URI.create(iri);
+    }
+
+    /**
+     * Add Extensions
+     * @param key    key for the Extension
+     * @param value  value for Extension
+     * @return       void
+     */
+    public void addExtension(String key, Object value) {
+        if (extensions == null) {
+            extensions = new Extension(key, value);
+        } else {
+            extensions.put(key, value);
+        }
     }
 
     /**
